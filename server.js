@@ -23,7 +23,7 @@ app.use(
 );
 app.use(express.urlencoded({ extended: true }));
 
-connect(process.env.MONGO_URI).then(() => console.log("DB connected"));
+connect(`${process.env.MONGO_URI}`).then(() => console.log("DB connected"));
 
 app.listen(5000, () => console.log("Server running"));
 
